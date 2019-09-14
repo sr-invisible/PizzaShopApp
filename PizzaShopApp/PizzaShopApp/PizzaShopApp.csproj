@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD018EE9-889B-4C25-95BB-99BC78B9190C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PizzaShopApp</RootNamespace>
+    <AssemblyName>PizzaShopApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\UI\AllProducts.aspx" />
+    <Content Include="Admin\UI\DeleteProduct.aspx" />
+    <Content Include="Admin\UI\EditProduct.aspx" />
+    <Content Include="Admin\UI\SaveProductPage.aspx" />
+    <Content Include="Admin\UI\ShowAllOrders.aspx" />
+    <Content Include="Admin\UI\UserOrderInDetails.aspx" />
+    <Content Include="Common\UI\About.aspx" />
+    <Content Include="Common\UI\Contact.aspx" />
+    <Content Include="Common\UI\ForgetPassword.aspx" />
+    <Content Include="Common\UI\LoginPage.aspx" />
+    <Content Include="css\style1.css" />
+    <Content Include="css\style2.css" />
+    <Content Include="css\styleAdmin.css" />
+    <Content Include="images\body_bg3.jpg" />
+    <Content Include="images\discount-img.png" />
+    <Content Include="images\image1.jpeg" />
+    <Content Include="images\images.jpg" />
+    <Content Include="images\kansas-city-bbq-pizza-three-quarte.png" />
+    <Content Include="images\large_pizza.gif" />
+    <Content Include="images\logo.png" />
+    <Content Include="Users\UI\CartItems.aspx" />
+    <Content Include="Users\UI\Order.aspx" />
+    <Content Include="Users\UI\ProductDetailsPage.aspx" />
+    <Content Include="Users\UI\ProductList.aspx" />
+    <Content Include="Common\UI\RegistrationPage.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Users\UI\RemoveProductFromCard.aspx" />
+    <Content Include="Users\Web.config" />
+    <Content Include="Admin\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Common\UI\MasterPage\Default.Master" />
+    <Content Include="Common\UI\MasterPage\Admin.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\DatabaseForPizzaShop.mdf" />
+    <Content Include="App_Data\DatabaseForPizzaShop_log.ldf">
+      <DependentUpon>DatabaseForPizzaShop.mdf</DependentUpon>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\UI\AllProducts.aspx.cs">
+      <DependentUpon>AllProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UI\AllProducts.aspx.designer.cs">
+      <DependentUpon>AllProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UI\DeleteProduct.aspx.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UI\DeleteProduct.aspx.designer.cs">
+      <DependentUpon>DeleteProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UI\EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UI\EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UI\SaveProductPage.aspx.cs">
+      <DependentUpon>SaveProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UI\SaveProductPage.aspx.designer.cs">
+      <DependentUpon>SaveProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UI\ShowAllOrders.aspx.cs">
+      <DependentUpon>ShowAllOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UI\ShowAllOrders.aspx.designer.cs">
+      <DependentUpon>ShowAllOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UI\UserOrderInDetails.aspx.cs">
+      <DependentUpon>UserOrderInDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UI\UserOrderInDetails.aspx.designer.cs">
+      <DependentUpon>UserOrderInDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BLL\OrderManager.cs" />
+    <Compile Include="Common\DAL\OrderGateway.cs" />
+    <Compile Include="Common\Models\Data\Order.cs" />
+    <Compile Include="Common\Models\Data\OrderItemDetails.cs" />
+    <Compile Include="Common\Models\Data\OrderItems.cs" />
+    <Compile Include="Common\Models\ViewModels\OrderRecord.cs" />
+    <Compile Include="Common\UI\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UI\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UI\ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UI\MasterPage\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\MasterPage\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UI\CartItems.aspx.cs">
+      <DependentUpon>CartItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UI\CartItems.aspx.designer.cs">
+      <DependentUpon>CartItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UI\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UI\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UI\ProductDetailsPage.aspx.cs">
+      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UI\ProductDetailsPage.aspx.designer.cs">
+      <DependentUpon>ProductDetailsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\UI\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UI\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserRoll.cs" />
+    <Compile Include="Common\BLL\LoginManager.cs" />
+    <Compile Include="Common\BLL\ProductManager.cs" />
+    <Compile Include="Common\BLL\UserManager.cs" />
+    <Compile Include="Common\DAL\CommonGateway.cs" />
+    <Compile Include="Common\DAL\LoginGateway.cs" />
+    <Compile Include="Common\DAL\ProductGayeway.cs" />
+    <Compile Include="Common\DAL\UserGateway.cs" />
+    <Compile Include="Common\Models\Data\Product.cs" />
+    <Compile Include="Common\Models\Data\User.cs" />
+    <Compile Include="Common\UI\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UI\MasterPage\Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\MasterPage\Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UI\RegistrationPage.aspx.cs">
+      <DependentUpon>RegistrationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UI\RegistrationPage.aspx.designer.cs">
+      <DependentUpon>RegistrationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\UI\RemoveProductFromCard.aspx.cs">
+      <DependentUpon>RemoveProductFromCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\UI\RemoveProductFromCard.aspx.designer.cs">
+      <DependentUpon>RemoveProductFromCard.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16505</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16505/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

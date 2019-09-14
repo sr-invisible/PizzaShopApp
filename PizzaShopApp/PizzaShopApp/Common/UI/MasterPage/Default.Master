@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="PizzaShopApp.Common.UI.MasterPage.Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../../../css/style1.css" rel="stylesheet" type="text/css" media="all" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrap">
+            <div class="header">
+                <div class="clear"></div>
+                <div class="header-top-nav">
+                    <ul>
+                        <li><a href="/Common/UI/RegistrationPage.aspx">Registration</a></li>
+                        <li><a href="/Common/UI/LoginPage.aspx">Login</a></li>
+                        <li><asp:LinkButton ID="lbtnCheckout" runat="server" PostBackUrl="~/Users/UI/CartItems.aspx">Check out</asp:LinkButton></li>
+                        
+                        <li>
+                            <asp:Button ID="btnLout" runat="server" Text="Log out"  OnClick="btnLout_Click" /></li>
+                    </ul>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="top-header">
+                <!----start-logo---->
+                <div class="logo">
+                    <a href="/Users/UI/ProductList.aspx">
+                        <img src="/images/logo.png" title="logo" /></a>
+                </div>
+                <!----end-logo---->
+                <!----start-top-nav---->
+                <div class="top-nav">
+                    <ul>
+                        <li><asp:LinkButton ID="lbtnHome" runat="server" PostBackUrl="~/Users/UI/ProductList.aspx">Home</asp:LinkButton></li>
+                        <li><a href="/Common/UI/About.aspx">About</a></li>
+                        <li><a href="/Common/UI/Contact.aspx">Contact</a></li>
+
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+
+            </asp:ContentPlaceHolder>
+            <div class="copy-right">
+                <p>&copy; 2017 Online Pizza Shop. All Rights Reserved | Design by  Namespace</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

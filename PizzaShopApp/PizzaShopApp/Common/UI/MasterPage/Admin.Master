@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="PizzaShopApp.Common.UI.MasterPage.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title></title>
+	<link href="../../../css/styleAdmin.css" rel="stylesheet" type="text/css"  media="all" />
+	<asp:ContentPlaceHolder ID="head" runat="server">
+		
+		
+	</asp:ContentPlaceHolder>
+</head>
+<body>
+	<form id="form1" runat="server">
+		<div class="wrap">
+		<div class="top-header">
+		<!----start-logo---->
+			<div class="logo">
+				<a href="/Admin/UI/AllProducts.aspx"><img src="/images/logo.png" title="logo" /></a>
+			</div>
+		<!----end-logo---->
+		<!----start-top-nav---->
+		<div class="top-nav">
+			<ul>
+				<li><a href="../../../Admin/UI/AllProducts.aspx">Show All</a></li>
+				<li><a href="../../../Admin/UI/SaveProductPage.aspx">Add Product</a></li>
+				<li><a href="../../../Admin/UI/ShowAllOrders.aspx">Show All Orders</a></li>
+				<li><asp:Button ID="btnLout" runat="server" Text="Log out" OnClick="btnLogout_Click"/></li>
+			</ul>
+		</div>
+		<div class="clear"> </div>
+		
+		</div>
+		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+		
+			
+
+		</asp:ContentPlaceHolder>
+			  <div class="copy-right">
+			<p>&copy; 2017 Online Pizza Shop. All Rights Reserved | Design by  Namespace</p>
+		</div>
+			</div>
+	</form>
+</body>
+</html>
